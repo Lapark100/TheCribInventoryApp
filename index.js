@@ -16,8 +16,8 @@ env.config();
 const db = new pg.Client({
     user: "postgres",
     host: "localhost",
-    database: "tope_kitchen",
-    password: "helena70",
+    database: process.env.DATABASE_NAME,
+    password: process.env.DATABASE_PASSWORD,
     port: 5432,
 });
 
