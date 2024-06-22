@@ -211,7 +211,6 @@ passport.use(new Strategy( async function verify(username, password, cb){
                     // User exists
                     if (result) {
                         return cb(null, user)
-                        re;
                     } else {
                         // User does not exist
                        return cb(null, false)
