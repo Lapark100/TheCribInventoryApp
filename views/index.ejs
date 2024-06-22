@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/cae296929f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+
+
+    <title>The Crib Inventory App</title>
+    <link
+        href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAuwAAAAAAAADdAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERERERERERERARERERERERAgERERERERAjIBERERERAjIyARERERAjICMgERERAjIBAjIBERECIBEQIyAREQABERECMgERERERERAjIBEREREREQIyARERERERECMgERERERERAiAREREREREQABERERERERERERERERERERH//wAA+/8AAPH/AADg/wAAwH8AAIA/AAAEHwAADg8AAB8HAAD/gwAA/8EAAP/gAAD/8AAA//gAAP//AAD//wAA"
+        rel="icon" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+
+    <div id="content" style="display: none;" class="dashboard-container">
+        <div class="navigation">
+            <div class="logo">
+                <h1 class="logo-header">
+                    CA
+                </h1>
+            </div>
+            <div class="nav-links">
+
+                <a href="/home">
+                    Dashboard
+                </a>
+                <a href="/products">
+                    Products
+                </a>
+                <a>
+                    Users
+                </a>
+                <a>
+                    Requests
+                </a>
+            </div>
+            
+        </div>
+        <div class="welcome-header">
+            <h1>Welcome 
+            </h1>
+        </div>
+        <div class="master-card-container">
+            <div class="card-container">
+                <div class="dashboard-card">
+                    <div class="dc-figures">
+                        <div>
+                            <div class="dc-icon">
+                                <i class="fa-solid fa-cube dci"></i>
+                            </div>
+                            <h3 class="dc-header">
+                                Total Products
+                            </h3>
+                        </div>
+
+                        <div class="products-total">
+                            <h2 class="product-total-header">
+                                <%= products.length%>
+                            </h2>
+                            <p class="pt-paragraph">
+                                unit(s)
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div>
+                <div class="card-container">
+                    <div class="dashboard-card">
+                        <div class="dc-figures">
+                            <div>
+                                <div class="dc-icon">
+                                    <i class="fa-solid fa-user dci"></i>
+                                </div>
+                                <h3 class="dc-header">
+                                    Total Users
+                                </h3>
+                            </div>
+
+                            <div class="products-total">
+                                <h2 class="product-total-header">
+                                    <%=noUsers%>
+                                </h2>
+                                <p class="pt-paragraph">
+                                    user(s)
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="dashboard-card">
+                    <div class="dc-figures">
+                        <div>
+                            <div class="dc-icon">
+                                <i class="fa-solid fa-hand dci"></i>
+                            </div>
+                            <h3 class="dc-header">
+                                Total Requests
+                            </h3>
+                        </div>
+
+                        <div class="products-total">
+                            <h2 class="product-total-header">
+                                69
+                            </h2>
+                            <p class="pt-paragraph">
+                                Requests
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="dashboard-card">
+                    <div class="dc-figures">
+                        <div>
+                            <div class="dc-icon">
+                                <i class="fa-solid fa-copyright dci"></i>
+                            </div>
+                            <h3 class="dc-header">
+                                Total Brands
+                            </h3>
+                        </div>
+
+                        <div class="products-total">
+                            <h2 class="product-total-header">
+                                400
+                            </h2>
+                            <p class="pt-paragraph">
+                                Brands
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="products-table-container">
+            <div class="ptc-header">
+                <h3>
+                    Top Products
+                </h3>
+                <div class="products-table-holder">
+                    <div class="products-table-headings">
+                        <p> ID</p>
+                        <p>Name</p>
+                        <p>Price</p>
+                        <p>Stock</p>
+                    </div>
+                </div>
+            </div>
+            <% products.forEach((product) => { %>
+                <div class="products-table-contents">
+                    <p>
+                        <%= product.id %>
+                    </p>
+                    <div class="custom-name">
+                        <p>
+                            <%= product.name %>
+                        </p>
+                    </div>
+                    <div class="custom-p">
+                        <p>
+                            <%= product.quantity %>
+                        </p>
+                    </div>
+                    <p class="last-item">
+                        <%= product.cost_price %>
+                    </p>
+                </div>
+           <% })%>
+            
+          
+            
+        </div>
+        <div class="user-table-container">
+            <div class="utc-header">
+                <h3>
+                    Top Users
+                </h3>
+                <div class="users-table-holder">
+
+                    <div class="users-table-headings">
+                        <p> ID</p>
+                        <p>Name</p>
+                        <p>Role</p>
+                        <p>Email</p>
+                    </div>
+                </div>
+                <% users.forEach((user)=> { %>
+                    <div class="products-table-contents">
+
+
+                        <p for=" <%= user.id %>">
+                            <%= user.id %>
+                        </p>
+                        <div class="custom-name-user">
+                            <p for=" <%= user.id %>">
+
+                                <%= user.first_name%>
+                                    <%= user.last_name%>
+
+                            </p>
+                        </div>
+                        <div class="custom-p-user">
+                            <p>
+
+                                <%= user.user_role%>
+                            </p>
+                        </div>
+                        <p class="last-item-user">
+                            <%= user.email%>
+                        </p>
+
+
+
+                    </div>
+
+                    <% });%>
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            ©2024 Copyright Park Technologies
+        </p>
+    </footer>
+    <script>
+
+        // window.addEventListener('load', function() {
+        //             document.getElementById('preloader').style.display = 'none';
+        //             document.getElementById('content').style.display = 'block';
+        //         });
+
+        window.addEventListener('load', function () {
+            const MIN_LOAD_TIME = 1000; // Minimum load time in milliseconds (e.g., 2000ms = 2 seconds)
+            const loadTime = Date.now() - performance.timing.navigationStart;
+
+            if (loadTime < MIN_LOAD_TIME) {
+                setTimeout(() => {
+                    document.getElementById('preloader').style.display = 'none';
+                    document.getElementById('content').style.display = 'block';
+                }, MIN_LOAD_TIME - loadTime);
+            } else {
+                document.getElementById('preloader').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>

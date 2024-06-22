@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cae296929f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./login.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="signup-container">
+        <div class="signup-form">
+            <form action="/auth" method="post">
+                <h1 class="signup-header">
+                    CA
+                </h1>
+                <p class="signup-p">
+                    Enter Login Credentials
+                </p>
+                <div class="exit-btn">
+                    <a href="/"> <i class="fa-solid fa-xmark exit-icon" ></i></a>
+                </div>
+                <input type="text" name="username" placeholder="Email" required>
+                <input type="text" name="password" placeholder="Password" required>
+                <p class="p-signup">
+                    Don't have an account? <a href="/signup" name="">Sign Up</a>
+                </p>
+                <button class="signup-btn" type="submit">
+                    Login <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+
+        </div>
+    </div>
+</body>
+</body>
+
+</html>

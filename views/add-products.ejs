@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cae296929f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./signup.css">
+    <title>Sign-up</title>
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-form">
+            <form action="/new-product" method="post">
+                
+                <h1 class="signup-header">
+                    CA
+                </h1>
+               <p class="signup-p">
+                Please enter product details
+               </p>
+               <div class="exit-btn">
+                <a href="/products"> <i class="fa-solid fa-xmark exit-icon" ></i></a>
+            </div>
+               <input type="text" name="name" placeholder="Product Name">
+               <input type="text" name="cost_price" placeholder="Price">
+               <input type="text" name="quantity" placeholder="Quantity">
+               <select id="categorySelect" name="category" >
+                <option >Select Program</option>
+                <option value="drinks">Drinks</option>
+                <option value="ingrdients">Ingrdients</option>
+                <option value="toiletries">Toiletries</option>
+            </select>
+
+               
+                
+                <button  class="signup-btn" type="submit">
+                    Submit <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              
+               
+            </form>
+        </div>
+    </div>
+</body>
+</html>

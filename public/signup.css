@@ -1,0 +1,136 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #0A0A0A;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: white;
+}
+
+.signup-header{
+    color: white;
+}
+
+.signup-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+   justify-content: center;
+}
+
+.signup-header{
+   text-align: center; 
+   font-size: 54px;
+   margin: 0px;
+}
+
+.signup-form{
+    margin-top: 20px;
+    padding: 20px;
+    padding-top: 15px;
+    background: rgba(0, 224, 116, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+}
+
+input, option {
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    background-color: #0A0A0A;
+    border-radius: 5px;
+    font-size: 10px;
+    border: 1px solid;
+    border-color: #C0C0C0;
+    padding-left: 10px;
+    color: #C0C0C0;
+}
+
+select {
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    background-color: #0A0A0A;
+    border-radius: 5px;
+    font-size: 10px;
+    border: 1px solid;
+    border-color: #C0C0C0;
+    padding-left: 5px;
+    color: #C0C0C0;
+}
+
+option {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    color: #C0C0C0;
+}
+
+.signup-p {
+    margin: 0px;
+    text-align: center;
+    color: #C0C0C0;
+    font-size: 12px;
+    padding-left: 0px;
+}
+
+.signup-btn{
+    margin-top: 30px;
+    padding: 14px;
+    padding-left: 143px;
+    padding-right: 143px;
+    margin-left: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: #FE8A00;
+    color: white;
+    border: 1px solid;
+    border-color: black;
+    box-shadow: 5px 10px black;
+    font-weight: bold;
+}
+
+.fa-arrow-right{
+    padding-left: 5px;
+}
+
+.exit-btn{
+    position: absolute;
+    top: 15px;
+    left: 23rem;
+    cursor: pointer;
+}
+
+.exit-icon{
+    color: white;
+}
+
+
