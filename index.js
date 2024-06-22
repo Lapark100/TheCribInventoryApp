@@ -9,13 +9,13 @@ import env from "dotenv";
 
 const app = express();
 const port = 3000;
-const saltRounds = 10;
+const saltRounds = process.env.SALT_ROUNDS;
 env.config();
 
 
 const db = new pg.Client({
-    user: "postgres",
-    host: "localhost",
+    user: process.env.DATABASE_USER,
+    host: process.env.DATABASE_HOST,
     database: process.env.DATABASE_NAME,
     password: process.env.DATABASE_PASSWORD,
     port: 5432,
@@ -31,7 +31,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     cookie: {
-        maxAge: 1000 * 60 * 60 * 24
+        maxAge: 1000 * 60 * 60 * 24 
     }, 
 }));
 
